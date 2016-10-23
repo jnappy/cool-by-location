@@ -2,12 +2,14 @@
 # add another parameter to the function called "occupation"
 # 
 
-def location_checker(location)
+def location_checker(location, occupation)
 	if location == "brooklyn" or location == "manhattan"
 		puts("you are so cool")
 	elsif location == "queens" or location == "bronx" 
 		puts("you are cool")
-
+	elsif location == "long island" and occupation = "bartendar"
+		puts("you are sneaky cool")
+		
 	# add one more conditional
 	# if the user lives on long island and is a bartender
 	# show them a message, you are sneaky cool
@@ -19,13 +21,18 @@ end
 
 puts("where do you live?")
 
-user_location = gets.strip
+user_location = gets.strip.downcase
 
 #ask the user what their occupation is
 
+puts("what is your occupation?")
+
 #store that information in another variable
+
+user_occupation = gets.strip.downcase
 
 #modify the function call 
 
 
-location_checker(user_location)
+location_checker(user_location, user_occupation)
+
